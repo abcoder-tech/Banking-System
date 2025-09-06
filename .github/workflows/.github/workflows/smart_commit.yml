@@ -29,7 +29,7 @@ jobs:
         if: steps.randomizer.outputs.commit_today == 'true'
         id: commit_count
         run: |
-          COUNT=$(( (RANDOM % 3) + 1 )) # 1 to 3 commits
+          COUNT=$(( (RANDOM % 5) + 1 )) # 1 to 3 commits
           echo "commit_count=$COUNT" >> $GITHUB_OUTPUT
 
       - name: Make multiple commits
